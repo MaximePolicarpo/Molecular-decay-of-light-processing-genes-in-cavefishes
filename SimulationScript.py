@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-#Corresponding auhors : Julien Fumey (julien.fumey@egce.cnrs-gif.fr), Didier Casane (didier.casane@egce.cnrs-gif.fr) and Maxime Policarpo (maxime.policarpo@hotmail.fr)
+#Corresponding auhors : Julien Fumey (julien.fumey@egce.cnrs-gif.fr), Didier Casane (didier.casane@egce.cnrs-gif.fr) and Maxime Policarpo (maxime.policarpo@egce.cnrs-gif.fr)
 	
 
 import sys
