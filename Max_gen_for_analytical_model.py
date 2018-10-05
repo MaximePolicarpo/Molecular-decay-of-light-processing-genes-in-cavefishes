@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-#Corresponding auhors : Didier Casane (didier.casane@egce.cnrs-gif.fr) and Maxime Policarpo (maxime.policarpo@hotmail.fr)
+#Corresponding auhors : Didier Casane (didier.casane@egce.cnrs-gif.fr) and Maxime Policarpo (maxime.policarpo@egce.cnrs-gif.fr)
 
 import math
 import matplotlib.pyplot as plt
