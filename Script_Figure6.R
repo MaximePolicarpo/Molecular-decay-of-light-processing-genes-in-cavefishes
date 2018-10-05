@@ -1,6 +1,6 @@
 ###  Simulation of mutation distribution observed vs simulated #######
 
-#Corresponding auhors : Didier Casane (didier.casane@egce.cnrs-gif.fr) and Maxime Policarpo (maxime.policarpo@hotmail.fr)
+#Corresponding auhors : Didier Casane (didier.casane@egce.cnrs-gif.fr) and Maxime Policarpo (maxime.policarpo@egce.cnrs-gif.fr)
 #library("psych", lib.loc="~/R/x86_64-pc-linux-gnu-library/3.0")
 
 # We observe 19 pseudogenes in dentata for a total of 24 mutations
