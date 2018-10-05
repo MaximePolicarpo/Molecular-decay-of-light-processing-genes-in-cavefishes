@@ -1,4 +1,4 @@
-# Corresponding authors :Didier Casane (didier.casane@egce.cnrs-gif.fr) and Maxime Policarpo (maxime.policarpo@hotmail.fr)
+# Corresponding authors :Didier Casane (didier.casane@egce.cnrs-gif.fr) and Maxime Policarpo (maxime.policarpo@egce.cnrs-gif.fr)
 # FIRST PART : SUPPLEMENTAL 1
 # SECOND PART : SUPPLEMENTAL 2
 
