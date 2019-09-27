@@ -2,6 +2,9 @@ library("boot")
 library(plotrix)
 library(data.table)
 library(tidyverse)
+library(purrr)
+library(ggplot2)
+library(data.table)
 
 read_plus <- function(flnm) {
   fread(file = flnm, fill = T, sep="\t") 
