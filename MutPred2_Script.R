@@ -1,6 +1,7 @@
 library("boot")
 library(plotrix)
 library(data.table)
+library(dplyr)
 library(tidyverse)
 library(purrr)
 library(ggplot2)
