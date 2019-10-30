@@ -413,7 +413,7 @@ plot(ecdf(-PAM5_matrix_scores), verticals = TRUE, do.points = TRUE, add=TRUE, co
 
 Neutral_mutations <- simu_all #Simultated mutations represent mutations that arise under neutral evolution
 #Mutations observed in surface fishes represent mutations arising under selective constraint
-Positiv_mutations <- c(as.numeric(unlist(Brotula_barbata_mutpred[,3])), as.numeric(unlist(Pygocentrus_mutpred[,3])), as.numeric(unlist(danio_rerio_mutpred[,3])), as.numeric(unlist(Astayanax_SF_mutpred[,3])))
+Positiv_mutations <- as.numeric(unlist(danio_rerio_mutpred[,3]))
 
 Ldentata_distrib <- as.numeric(unlist(Ldentata_mutpred[,3]))
 Amex_CF_distrib <- as.numeric(unlist(Astayanax_CF_mutpred[,3]))
