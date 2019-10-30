@@ -11,21 +11,14 @@ import time
 os.chdir("/Users/maxime/Desktop/MutPred_Analysis_Astyanax/Modele_Neutre_Pygocentrus/")
 
 
-n_mutation_CF = 58
-TsTvratio = 2.28
+n_mutation_CF = 58 #Indicate the number of mutations you want
+TsTvratio = 2.28 #Indicate the r ratio used in the simulation
 
-#parser = argparse.ArgumentParser(description="Neutral sequence evolution for mutpred")
-#parser.add_argument('-f', '--file', type=str, required=True, help="File name with sequences")        
-        
-#args = parser.parse_args()
-
-#args.file
-
-madf = pandas.read_csv("Pygocentrus_vision_CDS.tsv", sep="\t",header=None) #fichier avec les sequences
+madf = pandas.read_csv("Pygocentrus_vision_CDS.tsv", sep="\t",header=None) # You need a .tsv file with gene names in col 1 and gene sequences without stop codons in col 2
 madf.columns = ["Gene", "cds_seq"] 
 
-madf['cds_length']  = madf["cds_seq"].str.len() #ajouter la longeur de la CDS
-madf['prot_length']  = madf["cds_length"]//3   #ajouter la longeur de la proteine
+madf['cds_length']  = madf["cds_seq"].str.len() #add the CDS length to dataframe
+madf['prot_length']  = madf["cds_length"]//3   #ajouter protein length to dataframe
 
 madf = madf.append(madf.agg(['sum']))
 
@@ -123,21 +116,6 @@ while count_aa != n_mutation_CF :
 
 
 
-#print(original_prot_sequence)
-
-
-#evoluated_prot_sequence[0:355] #(prot_length - 1)
-#voluated_prot_sequence[355:370]
-
-
-#evoluated_prot_sequence[:355]
-#evoluated_prot_sequence[355:]
-
-
-#Pour chaque ligne de madf, on va recuperer le gene depuis la sequence concatenee grace a la colonne prot_lengthUnicodeWarning
-
-
-
 evoluated_genes=[]
 for row in madf.itertuples(index=True, name='Pandas'):
     malen = row[4]
@@ -149,7 +127,7 @@ for row in madf.itertuples(index=True, name='Pandas'):
 madf['new_prot_seq'] = evoluated_genes
 madf.drop(madf.tail(1).index,inplace=True)
 
-
+## The output file will be compatible to use directly with Mutpred
 
 timestr = time.strftime("%Y%m%d-%H%M%S")
 myfile = open("neutral_pygocentrus"+timestr, 'w')
@@ -171,10 +149,6 @@ for row in madf.itertuples(index=True, name='Pandas'):
             mutations_record.append(aa_old+str(i+1)+aa_new)
 
 
-#    print(">"+gene_name+" "+" ".join(mutations_record))
-#    print("".join(gene_seq))
-
-
 
     if len(mutations_record) != 0:
         myfile.write(">"+gene_name+" "+" ".join(mutations_record))
@@ -186,6 +160,3 @@ for row in madf.itertuples(index=True, name='Pandas'):
 myfile.close()
 
 
-
-
-#grep "Pygocentrus" Supplemental_Table1\ -\ Zebrafish+Astyanax+Sinocyclocheilus\ eye\ genes.tsv | cut -f2,10 | sed 's/...$//g'
