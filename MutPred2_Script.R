@@ -218,16 +218,16 @@ moyenne_kernel_y <- apply(matrice_de_y, 1, mean)
 lines(x=moyenne_kernel_x, y=moyenne_kernel_y, col="black", lwd=2)
 
 
-lines(density(as.numeric(unlist(Astayanax_CF_mutpred[,3]))), col="firebrick1", lwd=3)
-lines(density(as.numeric(unlist(Ldentata_mutpred[,3]))), col="brown4", lwd=3)
-lines(density(as.numeric(unlist(Lholguinensis_mutpred[,3]))), col="orange", lwd=3)
-lines(density(as.numeric(unlist(Astayanax_SF_mutpred[,3]))), col="deeppink", lwd=2)
-lines(density(as.numeric(unlist(Brotula_barbata_mutpred[,3]))), col="chartreuse4", lwd=2)
-lines(density(as.numeric(unlist(Pygocentrus_mutpred[,3]))), col="darkviolet", lwd=2)
-lines(density(as.numeric(unlist(danio_rerio_mutpred[,3]))), col="green", lwd=2)
-lines(density(as.numeric(unlist(grahami_mutpred[,3]))), col="blue4", lwd=2)
-lines(density(as.numeric(unlist(anshuiensis_mutpred[,3]))), col="darkred", lwd=2)
-lines(density(as.numeric(unlist(rhinocerous_mutpred[,3]))), col="goldenrod1", lwd=2)
+lines(density(as.numeric(unlist(Astayanax_CF_mutpred[,3])), from=0, to=1), col="firebrick1", lwd=3)
+lines(density(as.numeric(unlist(Ldentata_mutpred[,3])), from=0, to=1), col="brown4", lwd=3)
+lines(density(as.numeric(unlist(Lholguinensis_mutpred[,3])), from=0, to=1), col="orange", lwd=3)
+lines(density(as.numeric(unlist(Astayanax_SF_mutpred[,3])), from=0, to=1), col="deeppink", lwd=2)
+lines(density(as.numeric(unlist(Brotula_barbata_mutpred[,3])), from=0, to=1), col="chartreuse4", lwd=2)
+lines(density(as.numeric(unlist(Pygocentrus_mutpred[,3])), from=0, to=1), col="darkviolet", lwd=2)
+lines(density(as.numeric(unlist(danio_rerio_mutpred[,3])), from=0, to=1), col="green", lwd=2)
+lines(density(as.numeric(unlist(grahami_mutpred[,3])), from=0, to=1), col="blue4", lwd=2)
+lines(density(as.numeric(unlist(anshuiensis_mutpred[,3])), from=0, to=1), col="darkred", lwd=2)
+lines(density(as.numeric(unlist(rhinocerous_mutpred[,3])), from=0, to=1), col="goldenrod1", lwd=2)
 
 
 # Example of how to compute k.s tests between distributions #
